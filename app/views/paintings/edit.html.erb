@@ -1,0 +1,5 @@
+<%= form_for [@gallery, @painting] do |f| %>
+  <p><%= f.text_field :name, placeholder: "Enter painting name" %></p>
+  <p><%= f.text_field :image, placeholder: "Enter image url" %></p>
+  <p><%= f.submit "Update Painting", class: "btn btn-danger"%>
+<% end %>

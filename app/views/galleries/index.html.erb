@@ -1,0 +1,10 @@
+<h1>Galleries</h1>
+
+<div id="galleries">
+  <%= render @galleries %>
+</div>
+
+<div class="clearfix"></div>
+<hr/>
+<p><%= link_to "New Gallery", new_gallery_path, id: "new_link", remote: true %></p>
+<div class="clearfix"></div>

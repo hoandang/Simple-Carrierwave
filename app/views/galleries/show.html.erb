@@ -1,0 +1,8 @@
+<h1><%=@gallery.name%></h1>
+<br/>
+<ul class="thumbnails">
+  <%= render @paintings %>
+</ul>
+
+<hr/>
+<%= link_to "Add paintings", new_gallery_painting_path(@gallery) %>

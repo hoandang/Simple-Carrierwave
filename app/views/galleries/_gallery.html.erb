@@ -1,0 +1,21 @@
+<div class="gallery" id="gallery_<%= gallery.id %>">
+  <div>
+    <h1 style="display:inline" id="gallery_name_<%= gallery.id %>"><%= link_to gallery.name, gallery %></h1>
+    <a href="#" id="edit_cancel_link_<%= gallery.id %>" style="display:none">(cancel)</a>
+    <%= link_to "(edit)", edit_gallery_path(gallery), id: "edit_link_#{gallery.id}", remote: true %>
+    <%= link_to "(remove)", gallery, method: :delete, remote: true %>
+  </div>
+  <strong style="color:red"></strong>
+  <p>Paintings: <%= gallery.paintings.size %></p>
+</div>
+<script type="text/javascript" charset="utf-8">
+  $(function(){
+      $("#edit_cancel_link_<%= gallery.id %>").click(function(){
+        $("#gallery_name_<%= gallery.id %>").show()
+        $("#edit_gallery_<%= gallery.id %>").hide()
+        $("#edit_link_<%= gallery.id %>").show()
+        $("#gallery_<%= gallery.id %>").find("strong").hide()
+        $(this).hide()
+      });
+  });
+</script>

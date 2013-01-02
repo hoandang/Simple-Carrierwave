@@ -1,0 +1,11 @@
+<li class="span3 thumb">
+  <div class="remove_edit">
+    <%= link_to "remove", [@gallery, painting], class: "remove_btn label label-inverse", method: :delete %>
+    <%= link_to "edit", edit_gallery_painting_path(@gallery, painting), class: "edit_btn label label-inverse" %>
+  </div>
+
+  <a href="#" class="thumbnail">
+    <img data-src="holder.js/260x270" style="width: 260px; height: 270px;" src="<%= painting.image %>"> 
+  </a>
+  <strong><%= painting.name %></strong>
+</li>
