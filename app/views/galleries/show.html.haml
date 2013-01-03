@@ -1,0 +1,9 @@
+%h1= @gallery.name
+
+%br
+
+%ul.thumbnails
+  = render partial: @paintings
+%hr
+
+= link_to "New Painting", new_gallery_painting_path(@gallery)

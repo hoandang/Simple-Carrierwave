@@ -1,0 +1,5 @@
+%h2 Creare new Painting
+= form_for [@gallery, @painting] do |f|
+  %p= f.text_field :name, placeholder: "Enter painting name"
+  %p= f.file_field :image
+  %p= f.submit "Creare Painting", class: "btn btn-danger"

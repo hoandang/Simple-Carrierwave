@@ -1,0 +1,10 @@
+%h1 Galleries
+
+#galleries
+  =render @galleries
+
+.clearfix
+%hr
+%p
+  = link_to "New Gallery", new_gallery_path, id: "new_link", remote: true 
+.clearfix
