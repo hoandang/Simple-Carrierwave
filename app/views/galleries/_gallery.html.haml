@@ -1,0 +1,7 @@
+.gallery
+  = link_to gallery.name, gallery
+  = link_to "(edit)", edit_gallery_path(gallery), class: "edit_link"
+  = link_to "(remove)", gallery, method: :delete
+  %p
+    %strong.error_msg
+  %p= "Paintings: #{gallery.paintings.size}"

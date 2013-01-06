@@ -1,3 +1,4 @@
+%p= link_to "Home", root_path
 %h1= @gallery.name
 
 %br
@@ -6,4 +7,7 @@
   = render partial: @paintings
 %hr
 
-= link_to "New Painting", new_gallery_painting_path(@gallery)
+= form_for [@gallery, @gallery.paintings.new] do |f|
+  %p
+    = f.file_field :image, multiple: true
+    = f.submit class: "btn btn-info"

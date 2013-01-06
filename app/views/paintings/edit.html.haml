@@ -1,0 +1,6 @@
+%p= link_to "Back to gallery", @gallery
+%hr
+= form_for [@gallery, @painting], id: "edit_painting" do |f|
+  %p= f.text_field :name, placeholder: "Enter painting name"
+  %p= image_tag @painting.image_url, id: "painting_image"
+  %p= f.submit "Update Painting", class: "btn btn-danger"

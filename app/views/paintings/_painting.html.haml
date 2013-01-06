@@ -1,0 +1,6 @@
+%li.span3.thumb
+  .remove_edit
+    = link_to "remove", [@gallery, painting], class: "remove_btn label label-inverse", method: :delete 
+    = link_to "edit", edit_gallery_painting_path(@gallery, painting), class: "edit_btn label label-inverse"
+  = link_to image_tag(painting.image_url(:thumb)), "#", class: "thumbnail"
+  %strong=painting.name

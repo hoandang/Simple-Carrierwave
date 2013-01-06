@@ -8,7 +8,8 @@ class GalleriesController < ApplicationController
   end
 
   def create
-    @gallery = Gallery.new(params[:gallery])
+    Gallery.create(params[:gallery])
+    redirect_to root_path
   end
 
   def edit
@@ -16,17 +17,13 @@ class GalleriesController < ApplicationController
   end
 
   def destroy
-    @gallery = Gallery.find(params[:id])
-    @gallery.destroy
+    Gallery.find(params[:id]).destroy
+    redirect_to root_path
   end
 
   def update
-    @gallery = Gallery.find(params[:id])
-    if @gallery.update_attributes(params[:gallery])
-      @updated= true
-    else
-      @updated = false
-    end
+    Gallery.find(params[:id]).update_attributes(params[:gallery])
+    redirect_to root_path
   end
 
   def show

@@ -31,6 +31,9 @@ h1 a {
     float: left;
     width: 360px;
     margin-bottom: 25px;
+    a:first-child {
+      font-size: 1.5em;
+    }
   }
 }
 
@@ -53,5 +56,24 @@ h1 a {
   }
   .remove_edit {
     display: none;
+  }
+}
+
+.edit_painting {
+  #painting_name {
+    border: 0;
+    box-shadow: none;
+    display: block;
+    color: #4B7399;
+    font: {
+      size: 1.5em;
+      weight: bold;
+    }
+  }
+  #painting_image {
+    box-shadow: 1px 1px 5px #888;
+    margin: 5px 0 10px;
+    max-width: 588px;
+    max-height: 804px;
   }
 }
