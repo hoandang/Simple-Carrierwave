@@ -1,0 +1,9 @@
+= link_to "Back to home", root_path
+%h2 Signup
+= render partial: "error_messages" if @user.errors.any?
+= form_for @user do |f|
+  %p= f.text_field :name, placeholder: "Enter name"
+  %p= f.text_field :email, placeholder: "Enter email"
+  %p= f.password_field :password, placeholder: "Enter password"
+  %p= f.password_field :password_confirmation, placeholder: "Confirm password" 
+  %p= f.submit class: "btn btn-primary"

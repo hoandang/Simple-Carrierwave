@@ -1,8 +1,19 @@
 Carrierwave::Application.routes.draw do
+  #get "sessions/new"
+
+  #get "user/new"
+
+  #get "user/create"
+
   root :to => 'galleries#index'
   resources :galleries, only: [:new, :show, :destroy, :create, :edit, :update] do
     resources :paintings
   end
+
+  get "signup", to: "users#new", as: "signup"
+  get "login", to: "sessions#new", as: "login"
+  resources :users
+  resources :sessions 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,8 @@
+%h1 Log In
+- flash.each do |name, msg|
+  %p
+    %strong.error= msg
+= form_tag sessions_path do
+  %p= text_field_tag :email, nil, placeholder: "Enter email"
+  %p= password_field_tag :password, nil, placeholder: "Enter password"
+  %p= submit_tag "Login", class: "btn btn-inverse"

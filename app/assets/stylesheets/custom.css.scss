@@ -7,13 +7,27 @@ html {
 body {
   background-color: #4B7399;
 }
+
+.error {
+  color: red;
+  display: block;
+}
+
 #wrap {
   width: 75%;
-  margin: 0 auto;
   background-color: #FFF;
   padding: 20px 40px;
   border: solid 1px black;
-  margin-top: 20px;
+  margin-top: 50px;
+}
+
+/** nav **/
+nav {
+  float: right;
+  margin: 10px 0;
+  a {
+    font-size: 1.1em;
+  }
 }
 
 h1 a {
@@ -23,6 +37,23 @@ h1 a {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
+}
+
+/** header **/
+header{
+  height: 20px;
+  h1{
+    a {
+      text-transform: uppercase;
+      font-size: .6em;
+      line-height: 1;
+      display: block;
+      color: black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 #galleries {

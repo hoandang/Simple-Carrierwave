@@ -14,6 +14,7 @@ class PaintingsController < ApplicationController
       #painting = gallery.paintings.create(name: "foo", image: img)
     #end
     
+    # error handling
     gallery = Gallery.find(params[:gallery_id])
     params[:painting][:image].each do |img|
       painting = gallery.paintings.new
@@ -23,6 +24,8 @@ class PaintingsController < ApplicationController
         painting.save
       end
     end
+
+    # no error handling
     #params[:painting][:image].map { |img| gallery.paintings.create(name: img.original_filename, image: img) }
     redirect_to gallery
   end
